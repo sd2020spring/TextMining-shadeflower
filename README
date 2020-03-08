@@ -1,0 +1,4 @@
+How to run the code:
+
+Uncomment lines 38 - 41 to download the Complete Works of William Shakespeare. From there, the program should run fine. I used Atom to run the program, and then terminal to execute the program.
+After running the pickle file once, you may want to comment it again just so you don't accidentally take too many files from the website.
