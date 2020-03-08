@@ -1,0 +1,49 @@
+Mini Project 3 Reflection:
+
+Project Overview
+  In this project, I took The Complete Works of Shakespeare and using Markov Text Generation, I hoped to create snippets of writing that emulated Shakespeare's style. Through this, I would learn how Markov Text generation works and its uses and limitations.
+
+Implementation:
+  The code that I used was fairly straightforward. First, I downloaded the file using the Pickling technique, and saved it within the TextMining folder as a separate file. I received the file from the Gutenberg Project website. After pickling the file, it was time to write code that would store words and then synthesize them together. Before doing that, I wrote a function that parsed through the Gutenberg header. skip_gutenberg_header bypasses the start while process_file bypasses the end.
+
+  From there, process_file walks through each word using process_word which stores words and then adds them to a growing dictionary. It then added them to a growing tuple as well using shift. After processing words, random_text then chose random words to string together and create a file based on how many words are inputed. To run all the files together, a main function was created to run the program, and output the resulting text from the code.
+
+Results:
+  Overall, the results were pretty good. The outputted text did indeed sound like Shakespeare. Here's one result that I achieved:
+
+  What wretched errors hath my empty words,
+  Whilst my poor country’s to command:
+  Whither, indeed, before thy time?
+  Warwick is Chancellor and the other side;
+  Gelding th’ opposed continent as much as it would content me
+  To say I did it for a thousand deaths would die.
+  Exeunt PROCULEIUS and two good Armors;
+  if he wear a great estate. When he himself is not lost.
+  OTHELLO. Fetch’t, let me kiss This princess of pure love,
+  To have this twelvemonth she’ll not match his woe.
+  “It shall be to God! Even there my hopes but she,
+  more covetous, Would have flung
+
+  This paragraph was one of the better results, and made more legitimate sense than some of the other texts I received. There were some quite interesting results that popped up though. The higher the order, the more likely the text would just resemble an actual portion of Shakespeare. So to make it more random, lower orders were better. There also was the problem of how the program chose certain words.
+
+  Take these lines for example:
+
+  - Provided that you will elect by my troth, the fool follows after. [_Exit._]
+  - ANTIGONUS. Go thou further off; Bid me farewell. THE COMEDY OF ERRORS Contents ACT I Scene I.
+  - DORCAS. _Me pompae provexit apex._
+
+  The program that I've written doesn't actually distinguish between the stage directions (the _Exit_ part) as well as the characters being named (ANTIGONUS, DORCAS). To add onto that, the titles of the plays also made it in (as of course, they were added to the dictionary as the code never made the distinction between titles and the actual text). So there were several paragraphs that ended up having some strange words added in between.
+
+  Overall the program outputted really nice text, and while it didn't always make sense (and more often than not it didn't), it was still a wonderful experience getting so see how the program could stitch together words and create beautiful paragraphs.
+
+Alignment:
+  I feel that overall the data I collected and the code I wrote was in alignment. It seemed like Markov Text was well suited to a creation of Shakespeare's texts. I really just wanted to see how Markov handled old English, and if it could produce texts that made any kind of sense (as old English is much different compared to our modern day English). The results were what I expected--in some cases it sounded realistic. In other cases, it definitely wasn't what you'd find in a sonnet or a play.
+
+  The data source I had contained every work of Shakespeare. At first I thought that that was enough, and it was probably enough to get a decent sample size. But then after talking to Amon, I realized that it was entirely possible that someone else had transcribed the sonnets and plays in that work, which would change the language by even a tiny bit. Either way, it still gave me a solid base to work with, although it also was a little misleading for the program. As explained in the results section, there were some words that were titles, or character distinctions in plays that got added. While it didn't impede the program too much, it did skew the results a tiny bit.
+
+  I feel that overall, Markov text worked well for the questions I wanted to answer. For the most part, it worked like a charm with no hitches. But unfortunately, Markov cannot make the distinction between titles and characters and stage directions. So even though Markov worked really well, it also has its drawback. Despite that, I feel that Markov's generation overall provided me with answers that I was confident in.
+
+Reflection:
+  Overall, I felt my approach to the code was done well. When I got stuck, I tended to look things up online (many of my error messages were researched online) and it actually helped me understand what was going on. Pickling has been explained really well through this process of looking up error messages, and now I have a better understanding how how pickle stores info and can unpack it. I also have a better understanding of how Markov works after messing around with the numbers for a while.
+
+  Overall, I feel that my project was scoped well, and that I got a lot out of it. I learned a lot about pickle and Markov, and was able to implement them in a way that I was excited about. From here on out, I'm definitely going to continue the trend of looking up error messages, as I learn a lot about python and how it treats code that way. And overall, I am satisfied with the work that I have done.
